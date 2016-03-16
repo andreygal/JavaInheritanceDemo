@@ -3,7 +3,7 @@
  */
 public interface Queue<T> {
     //add an element to the back of the queue
-    void push(T element);
+    Queue<T> push(T element);
     //remove an element from the front of the queue
     void pop();
     //access an element at the front of the queue
@@ -11,3 +11,4 @@ public interface Queue<T> {
     //test if the queue is empty
     Boolean isEmpty();
 }
+//

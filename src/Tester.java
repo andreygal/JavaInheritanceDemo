@@ -3,7 +3,7 @@
  */
 public class Tester {
     public static void main(String args[]) {
-        LinkedQueue<Integer> myQueue = new LinkedQueue<Integer>();
+        LinkedQueue<Integer> myQueue = new LinkedQueue<>();
         myQueue.push(5);
         myQueue.push(8);
         System.out.println(myQueue.front());

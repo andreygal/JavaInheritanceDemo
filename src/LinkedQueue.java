@@ -21,7 +21,6 @@ public class LinkedQueue<T> implements Queue<T> {
         }
         else
             current.next = back;
-
         return this;
     }
     public void pop() {
@@ -31,13 +30,9 @@ public class LinkedQueue<T> implements Queue<T> {
     }
     public T front() {
         if (size == 0) throw new java.util.NoSuchElementException();
-        T element = front.element;
-        return element;
+        return front.element;
     }
     public Boolean isEmpty() {
-        if (size == 0)
-            return true;
-        else
-            return false;
+        return size == 0;
     }
 }

@@ -12,16 +12,32 @@ public class LinkedQueue<T> implements Queue<T> {
     private int size;
     //default constructor
     LinkedQueue() {}
-    public void push(T element) {
-        Node current = front;
-        front = new Node();
-        front.element = element;
+    public LinkedQueue<T> push(T element) {
+        Node current = back;
+        back = new Node();
+        back.element = element;
         if (size++ == 0) {
-            back = front;
+            front = back;
         }
         else
-            current.next = front;
+            current.next = back;
 
-
+        return this;
+    }
+    public void pop() {
+        if (size == 0) throw new java.util.NoSuchElementException();
+        front = front.next;
+        size--;
+    }
+    public T front() {
+        if (size == 0) throw new java.util.NoSuchElementException();
+        T element = front.element;
+        return element;
+    }
+    public Boolean isEmpty() {
+        if (size == 0)
+            return true;
+        else
+            return false;
     }
 }

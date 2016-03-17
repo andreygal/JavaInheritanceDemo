@@ -3,12 +3,19 @@
  */
 public class LinkedQueue<T> implements Queue<T> {
     //Node structure with a payload of type T
-    private class Node {
+    protected class Node {
         private T element;
         private Node next;
+        public void setNext(Node next) {
+            this.next = next;
+        }
+        public void setElement(T element) {
+            this.element = element;
+        }
     }
     //back = head; front = tail or the last list element
-    private Node back, front;
+    protected Node front;
+    private Node back;
     private int size;
     //default constructor
     LinkedQueue() {}

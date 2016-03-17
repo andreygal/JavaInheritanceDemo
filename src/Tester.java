@@ -12,5 +12,13 @@ public class Tester {
         System.out.println(myQueue.isEmpty());
         myQueue.pop();
         System.out.println(myQueue.isEmpty());
+        DerivedQueue<Integer> myDq = new DerivedQueue<>();
+        myDq.push(9);
+        myDq.push(5);
+        myDq.push(4);
+        myDq.emergencyPush(11);
+        System.out.println(myDq.front());
+        myDq.pop();
+        System.out.println(myDq.front());
     }
 }
